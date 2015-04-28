@@ -1,0 +1,23 @@
+// Compass base reset
+
+@import "compass/reset";
+
+// Demo styles
+
+.container {
+  max-width: 900px;
+  margin: 50px auto;
+  width: 98%;
+}
+
+.small-slider-wrapper,
+.medium-slider-wrapper,
+.large-slider-wrapper {
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+  font-size: 40px;
+  margin: 50px 0;
+}
