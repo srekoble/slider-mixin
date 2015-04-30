@@ -1,6 +1,27 @@
+// Import Pure slider
+
+@import "pure-slider";
+
+
+// Needer styles for Pure slider
+
+.slider-top {
+  @include slider-images(2, demo);
+}
+
+.slider-main {
+  @include slider-images(3, demo);
+}
+
+.slider-whatever {
+  @include slider-images(4, demo);
+}
+
+
 // Compass base reset
 
 @import "compass/reset";
+
 
 // Demo styles
 
