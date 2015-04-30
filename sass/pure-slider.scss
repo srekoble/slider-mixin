@@ -1,43 +1,95 @@
-[class*="slider-"] {
-  position: relative;
-  width: 100%;
-  height: 100%;
+// Slides mixin
 
-  > li {
-    position: absolute;
-    height: 100%;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-  }
-}
-
-// Slider mixin
-
-@mixin slider($keyframes, $slides, $time, $image) {
-
-  @for $i from 1 through $slides {
-
-    > li:nth-child(#{$i}) {
-      background: url(../images/#{$image}-#{$i}.jpg) center no-repeat;
-      background-size: cover;
-      -webkit-animation: #{$keyframes}-#{$i} #{$time} linear infinite;
-      animation: #{$keyframes}-#{$i} #{$time} linear infinite;
-    }
-  }
-
-  // Keyframes
+@mixin slides($slides) {
 
   @for $i from 1 through $slides {
 
     @at-root {
 
-      // Webkit rools
+      @-webkit-keyframes slider-#{$slides}-#{$i} {
 
-      @-webkit-keyframes #{$keyframes}-#{$i} {
+        @if $slides == 2 and $i == 1 {
+          0%   { opacity: 1; }
+          45%  { opacity: 1; }
+          50%  { opacity: 0; }
+          95%  { opacity: 0; }
+          100% { opacity: 1; }
+        }
 
-        // slides 2
+        @if $slides == 2 and $i == 2 {
+          0%   { opacity: 0; }
+          45%  { opacity: 0; }
+          50%  { opacity: 1; }
+          95%  { opacity: 1; }
+          100% { opacity: 0; }
+        }
+
+        // slides 3
+
+        @if $slides == 3 and $i == 1 {
+          0%   { opacity: 1; }
+          25%  { opacity: 1; }
+          30%  { opacity: 0; }
+          95%  { opacity: 0; }
+          100% { opacity: 1; }
+        }
+
+        @if $slides == 3 and $i == 2 {
+          0%   { opacity: 0; }
+          25%  { opacity: 0; }
+          30%  { opacity: 1; }
+          65%  { opacity: 1; }
+          70%  { opacity: 0; }
+          100% { opacity: 0; }
+        }
+
+        @if $slides == 3 and $i == 3 {
+          0%   { opacity: 0; }
+          25%  { opacity: 0; }
+          65%  { opacity: 0; }
+          70%  { opacity: 1; }
+          95%  { opacity: 1; }
+          100% { opacity: 0; }
+        }
+
+        // slides 4
+
+        @if $slides == 4 and $i == 1 {
+          0%   { opacity: 1; }
+          20%  { opacity: 1; }
+          25%  { opacity: 0; }
+          95%  { opacity: 0; }
+          100% { opacity: 1; }
+        }
+
+        @if $slides == 4  and $i == 2 {
+          0%   { opacity: 0; }
+          20%  { opacity: 0; }
+          25%  { opacity: 1; }
+          45%  { opacity: 1; }
+          50%  { opacity: 0; }
+          100% { opacity: 0; }
+        }
+
+        @if $slides == 4 and $i == 3 {
+          0%   { opacity: 0; }
+          45%  { opacity: 0; }
+          50%  { opacity: 1; }
+          70%  { opacity: 1; }
+          75%  { opacity: 0; }
+          100% { opacity: 0; }
+        }
+
+        @if $slides == 4 and $i == 4 {
+          0%   { opacity: 0; }
+          70%  { opacity: 0; }
+          75%  { opacity: 1; }
+          95%  { opacity: 1; }
+          100% { opacity: 0; }
+        }
+      }
+
+      @keyframes slider-#{$slides}-#{$i} {
 
         @if $slides == 2 and $i == 1 {
           0%   { opacity: 1; }
@@ -124,18 +176,66 @@
 }
 
 
-// Slider generated mixin
+// Slider mixin
+
+@mixin slider-animation($slides, $time) {
+
+  @for $i from 1 through $slides {
+
+    > li:nth-child(#{$i}) {
+      -webkit-animation: slider-#{$slides}-#{$i} #{$time} linear infinite;
+      animation: slider-#{$slides}-#{$i} #{$time} linear infinite;
+    }
+  }
+}
+
+
+// Slider images
+
+@mixin slider-images($slides, $image) {
+
+  @for $i from 1 through $slides {
+
+    > li:nth-child(#{$i}) {
+      background: url(../images/#{$image}-#{$i}.jpg);
+      background-size: cover;
+    }
+  }
+}
 
 .slider-2 {
-  @include slider(slider-2, 2, 15s, demo);
+  @include slides(2);
+  @include slider-animation(2, 10s);
 }
 
 .slider-3 {
-  @include slider(slider-3, 3, 20s, demo);
+  @include slides(3);
+  @include slider-animation(3, 20s);
 }
 
 .slider-4 {
-  @include slider(slider-4, 4, 30s, demo);
+  @include slides(4);
+  @include slider-animation(4, 30s);
+}
+
+[class*="slider-"] {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  > li {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
 }
 
 
