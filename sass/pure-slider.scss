@@ -1,8 +1,13 @@
 // Slides mixin
 
-@mixin slides($slides) {
+@mixin pure-slider($slides, $time) {
 
   @for $i from 1 through $slides {
+
+    > li:nth-child(#{$i}) {
+      -webkit-animation: slider-#{$slides}-#{$i} #{$time} linear infinite;
+      animation: slider-#{$slides}-#{$i} #{$time} linear infinite;
+    }
 
     @at-root {
 
@@ -176,23 +181,9 @@
 }
 
 
-// Slider mixin
-
-@mixin slider-animation($slides, $time) {
-
-  @for $i from 1 through $slides {
-
-    > li:nth-child(#{$i}) {
-      -webkit-animation: slider-#{$slides}-#{$i} #{$time} linear infinite;
-      animation: slider-#{$slides}-#{$i} #{$time} linear infinite;
-    }
-  }
-}
-
-
 // Slider images
 
-@mixin slider-images($slides, $image) {
+@mixin pure-slider-images($slides, $image) {
 
   @for $i from 1 through $slides {
 
@@ -204,21 +195,20 @@
 }
 
 .slider-2 {
-  @include slides(2);
-  @include slider-animation(2, 10s);
+  @include pure-slider(2, 10s);
 }
 
 .slider-3 {
-  @include slides(3);
-  @include slider-animation(3, 20s);
+  @include pure-slider(3, 20s);
 }
 
 .slider-4 {
-  @include slides(4);
-  @include slider-animation(4, 30s);
+  @include pure-slider(4, 30s);
 }
 
-[class*="slider-"] {
+.slider-2,
+.slider-3,
+.slider-4 {
   position: relative;
   width: 100%;
   height: 100%;
