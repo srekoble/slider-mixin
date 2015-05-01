@@ -4,9 +4,11 @@
 
   @for $i from 1 through $slides {
 
+    $total-time: $time * $slides;
+
     > li:nth-child(#{$i}) {
-      -webkit-animation: slider-#{$slides}-#{$i} #{$time} linear infinite;
-      animation: slider-#{$slides}-#{$i} #{$time} linear infinite;
+      -webkit-animation: slider-#{$slides}-#{$i} #{$total-time} linear infinite;
+      animation: slider-#{$slides}-#{$i} #{$total-time} linear infinite;
     }
 
     @at-root {
