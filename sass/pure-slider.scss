@@ -197,15 +197,15 @@
 }
 
 .slider-2 {
-  @include pure-slider(2, 10s);
+  @include pure-slider(2, 5s);
 }
 
 .slider-3 {
-  @include pure-slider(3, 20s);
+  @include pure-slider(3, 5s);
 }
 
 .slider-4 {
-  @include pure-slider(4, 30s);
+  @include pure-slider(4, 5s);
 }
 
 .slider-2,
