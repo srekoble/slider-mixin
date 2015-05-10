@@ -1,14 +1,14 @@
 # Pure slider [wip]
 
-Pure slider is a sCSS only slideshow. enjoy!
+Pure slider is a sCSS-only slideshow. Enjoy!
 
-You can incude Pure slider scss mixin or use the appropriate
+You can include Pure slider scss mixin or use the appropriate
 classnames directly into your Markup. Currently it's an automated
 slider with a fade effect up to 4 slides.
 
 ## How to import
 
-Pure slider can easily be imported into any project.
+Pure slider can be easily imported into any project.
 
 To import Pure slider as an external stylesheet:
 
@@ -22,7 +22,7 @@ To import Pure slider into a scss file:
 @import "pure-slider";
 ````
 
-so far so good let see how it works.
+So far so good, let see how it works.
 
 ## How it works
 
@@ -52,10 +52,10 @@ There are some ready to use classnames:
 * `.slider-3`: for a slider with 3 slides (by default time is 3s)
 * `.slider-4`: for a slider with 4 slides (by default time is 3s)
 
-> Note: These are the current options 2,3 and 4 slides.
+> Note: These are the current options 2, 3 and 4 slides.
 
 To create a slider with 3 slides you need to add the `.slider-3`
-classname, An example:
+classname. An example:
 
 ````html
 <ul class="slider-3">
@@ -120,7 +120,6 @@ An example without img tags:
 Now you can add slide images as background-images directly into
 your css/scss or use our automated scss mixin to do that.
 
-
 `pure-slider-images` mixin takes 2 arguments:
 
 * slides
@@ -150,7 +149,7 @@ The css output will be:
 
 > Note: You can name the images as you want as long as they share
 the same prefix (ie demo-1.jpg, demo-2.jpg or foo-1.jpg, foo-2.jpg etc).
-Each image shoule be in a `jpg` format but you can always modify the
+Each image shoule be in `jpg` format but you can always modify the
 images format from the `pure-slider-images` mixin.
 
 ## Future tasks
@@ -158,20 +157,20 @@ images format from the `pure-slider-images` mixin.
 * Add a class for automatic slider
 * Add arrow navigation with css only
 * Add more slide effects
-* Add discription at slides
+* Add description at slides
 
 ## Why
 
 ### Why css only?
 
-lightweight with simple css animations instead of javascript.
+Lightweight with simple css animations instead of javascript.
 
 ### Why Pure slider?
 
 The concept isn't something new. Although the integration with sass mixins
 gives us the flexibility to add less styles and boost our development process.
 
-### Why to bother?
+### Why bother?
 
 You don't have to, it's a fun project that I highly use when there is a
 need for a simple as that slideshow.
