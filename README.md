@@ -1,9 +1,11 @@
 # Pure slider [wip]
 
-Pure slider is a sCSS-only slideshow. Enjoy!
+Pure slider is a sCSS-only slideshow.
 
 You can include Pure slider scss mixin or use the appropriate
-classnames directly into your Markup. Currently it's an automated
+classnames directly into your Markup.
+
+> Currently it's an automated
 slider with a fade effect up to 4 slides.
 
 ## How to import
@@ -26,7 +28,7 @@ So far so good, let see how it works.
 
 ## How it works
 
-Pure slider contain 1 core mixin `pure-slider` with 2 arguments:
+Pure slider contain one core mixin `pure-slider` with 2 arguments:
 
 * Slides
 * Time (duration of each slide)
@@ -52,7 +54,7 @@ There are some ready to use classnames:
 * `.slider-3`: for a slider with 3 slides (by default time is 3s)
 * `.slider-4`: for a slider with 4 slides (by default time is 3s)
 
-> Note: These are the current options 2, 3 and 4 slides.
+> Note: These are the current options 2, 3 or 4 slides.
 
 To create a slider with 3 slides you need to add the `.slider-3`
 classname. An example:
@@ -99,7 +101,7 @@ So the styles will be:
 ````
 
 > Note: For a markup with image tags you need to set the images
-in the same dimension (ie. each image 1000px x 600px).
+in the same dimension (For example: each image 1000px x 600px).
 
 ## slider with background images
 
@@ -154,7 +156,7 @@ images format from the `pure-slider-images` mixin.
 
 ## Future tasks
 
-* Add a class for automatic slider
+* Add a class for a non-automatic slider
 * Add arrow navigation with css only
 * Add more slide effects
 * Add description at slides
