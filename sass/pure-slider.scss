@@ -190,8 +190,8 @@
   @for $i from 1 through $slides {
 
     > li:nth-child(#{$i}) {
-      background: url(../images/#{$image}-#{$i}.jpg);
-      background-size: cover;
+      background: url(../images/#{$image}-#{$i}.jpg) no-repeat;
+      background-size: contain;
     }
   }
 }
