@@ -2,6 +2,8 @@
 
 Pure slider is a sCSS-only slideshow.
 
+see demo: [http://srekoble.github.io/slider-mixin/](http://srekoble.github.io/slider-mixin/)
+
 You can include Pure slider scss mixin or use the appropriate
 classnames directly into your Markup.
 
@@ -154,27 +156,6 @@ the same prefix (ie demo-1.jpg, demo-2.jpg or foo-1.jpg, foo-2.jpg etc).
 Each image shoule be in `jpg` format but you can always modify the
 images format from the `pure-slider-images` mixin.
 
-## Future tasks
-
-* Add a class for a non-automatic slider
-* Add arrow navigation with css only
-* Add more slide effects
-* Add description at slides
-
-## Why
-
-### Why css only?
-
-Lightweight with simple css animations instead of javascript.
-
-### Why Pure slider?
-
-The concept isn't something new. Although the integration with sass mixins
-gives us the flexibility to add less styles and boost our development process.
-
-### Why bother?
-
-You don't have to, it's a fun project that I highly use when there is a
-need for a simple as that slideshow.
+see demo: [http://srekoble.github.io/slider-mixin/](http://srekoble.github.io/slider-mixin/)
 
 Cheers :)
