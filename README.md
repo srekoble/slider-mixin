@@ -1,4 +1,4 @@
-# Pure slider [wip]
+# Pure slider
 
 Pure slider is a sCSS-only slideshow.
 
